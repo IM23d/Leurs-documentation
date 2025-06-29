@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leurs Bot - Commands</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <ul class="tabs">
+                <li data-tab="moderation" class="active"><i class="fas fa-shield-alt"></i> Moderation</li>
+                <li data-tab="economy"><i class="fas fa-coins"></i> Economy</li>
+                <li data-tab="levels"><i class="fas fa-chart-line"></i> Levels</li>
+                <li data-tab="fun"><i class="fas fa-laugh"></i> Fun</li>
+                <li data-tab="lastfm"><i class="fab fa-lastfm"></i> Last.fm</li>
+                <li data-tab="birthday"><i class="fas fa-birthday-cake"></i> Birthday</li>
+            </ul>
+            <a href="https://github.com/im23d/leurs" class="github-link" target="_blank" title="View on GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Moderation Section -->
+        <section id="moderation" class="tab-content active">
+            <h2><i class="fas fa-shield-alt"></i> Moderation Commands</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>prefix set</h3>
+                    <div class="syntax">prefix set [prefix]</div>
+                    <p>Set command prefix for server</p>
+                    <div class="permissions">Permissions: Administrator</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>prefix remove</h3>
+                    <div class="syntax">prefix remove</div>
+                    <p>Remove command prefix for server</p>
+                    <div class="permissions">Permissions: Administrator</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>ban</h3>
+                    <div class="syntax">ban @user [reason]</div>
+                    <p>Ban a user from the server</p>
+                    <div class="permissions">Permissions: Administrator</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>kick</h3>
+                    <div class="syntax">kick @user [reason]</div>
+                    <p>Kick a user from the server</p>
+                    <div class="permissions">Permissions: Administrator</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>mute</h3>
+                    <div class="syntax">mute @user [duration] [reason]</div>
+                    <p>Mute a user for a specified duration</p>
+                    <div class="permissions">Permissions: Administrator</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>unmute</h3>
+                    <div class="syntax">unmute @user</div>
+                    <p>Unmute a previously muted user</p>
+                    <div class="permissions">Permissions: Administrator</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>clear</h3>
+                    <div class="syntax">clear [amount]</div>
+                    <p>Clear a specified number of messages</p>
+                    <div class="permissions">Permissions: Administrator</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>cclear</h3>
+                    <div class="syntax">cclear [search text] [options]</div>
+                    <p>Advanced message clearing with search. <em>is really slow (rate limits)</em></p>
+                    <div class="permissions">Permissions: Administrator</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>saveroles</h3>
+                    <div class="syntax">saveroles [info]</div>
+                    <p>Save roles for all members or show save info</p>
+                    <div class="permissions">Permissions: Administrator</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>jail</h3>
+                    <div class="syntax">jail @user [time]</div>
+                    <p>Restrict a user to a jail channel</p>
+                    <div class="permissions">Permissions: Administrator</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>unjail</h3>
+                    <div class="syntax">unjail @user</div>
+                    <p>Remove a user from jail</p>
+                    <div class="permissions">Permissions: Administrator</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Economy Section -->
+        <section id="economy" class="tab-content">
+            <h2><i class="fas fa-coins"></i> Economy Commands</h2>
+            
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>balance</h3>
+                    <div class="syntax">balance</div>
+                    <p>Check your balance</p>
+                    <div class="aliases-title">Aliases:</div>
+                    <div class="aliases">
+                        <span class="alias">bal</span>
+                    </div>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>deposit</h3>
+                    <div class="syntax">deposit [amount]</div>
+                    <p>Deposit money into your bank</p>
+                    <div class="aliases-title">Aliases:</div>
+                    <div class="aliases">
+                        <span class="alias">dep</span>
+                    </div>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>withdraw</h3>
+                    <div class="syntax">withdraw [amount]</div>
+                    <p>Withdraw money from your bank</p>
+                    <div class="aliases-title">Aliases:</div>
+                    <div class="aliases">
+                        <span class="alias">wit</span>
+                    </div>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>beg</h3>
+                    <div class="syntax">beg</div>
+                    <p>Beg for money (once per day)</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>balancetop</h3>
+                    <div class="syntax">balancetop [page]</div>
+                    <p>View the economy leaderboard</p>
+                    <div class="aliases-title">Aliases:</div>
+                    <div class="aliases">
+                        <span class="alias">baltop</span>
+                    </div>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>gamble</h3>
+                    <div class="syntax">gamble [amount]</div>
+                    <p>Gamble your money with a coin flip</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>jobs</h3>
+                    <div class="syntax">jobs [page]</div>
+                    <p>View available jobs in the job market</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>buyjob</h3>
+                    <div class="syntax">buyjob [job name]</div>
+                    <p>Purchase a job to unlock it</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>work</h3>
+                    <div class="syntax">work</div>
+                    <p>Work at your jobs to earn money (once per day)</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>myjobs</h3>
+                    <div class="syntax">myjobs</div>
+                    <p>View your currently owned jobs</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>removejob</h3>
+                    <div class="syntax">removejob [job name]</div>
+                    <p>Remove a job from your current jobs</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fun Section -->
+        <section id="fun" class="tab-content">
+            <h2><i class="fas fa-laugh"></i> Fun Commands</h2>
+            
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>quote</h3>
+                    <div class="syntax">quote</div>
+                    <p>Create a quote image from a replied message</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>snipe</h3>
+                    <div class="syntax">s</div>
+                    <p>Shows the last deleted message in the channel</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>clear snipe</h3>
+                    <div class="syntax">cs</div>
+                    <p>Clears all stored deleted messages in this channel</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>timezone</h3>
+                    <div class="syntax">tz [@user]</div>
+                    <p>View your timezone or someone else's timezone</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>timezone set</h3>
+                    <div class="syntax">tz set [timezone]</div>
+                    <p>Set your timezone</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>timezone format</h3>
+                    <div class="syntax">tz format</div>
+                    <p>Toggle between 12-hour and 24-hour time format</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>remind me</h3>
+                    <div class="syntax">remindme [time] [reason]</div>
+                    <p>Set a reminder</p>
+                    <div class="aliases-title">Aliases:</div>
+                    <div class="aliases">
+                        <span class="alias">rm</span>
+                    </div>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>remind me list</h3>
+                    <div class="syntax">remindme_list</div>
+                    <p>List your active reminders</p>
+                    <div class="aliases-title">Aliases:</div>
+                    <div class="aliases">
+                        <span class="alias">list</span>
+                        <span class="alias">reminders</span>
+                    </div>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>afk</h3>
+                    <div class="syntax">afk [reason]</div>
+                    <p>Set yourself as AFK</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>avatar</h3>
+                    <div class="syntax">avatar [@user]</div>
+                    <p>View a user's avatar</p>
+                    <div class="aliases-title">Aliases:</div>
+                    <div class="aliases">
+                        <span class="alias">av</span>
+                    </div>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>server avatar</h3>
+                    <div class="syntax">serveravatar [@user]</div>
+                    <p>View a user's server-specific avatar</p>
+                    <div class="aliases-title">Aliases:</div>
+                    <div class="aliases">
+                        <span class="alias">sav</span>
+                    </div>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>banner</h3>
+                    <div class="syntax">banner [@user]</div>
+                    <p>View a user's banner</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>sbanner</h3>
+                    <div class="syntax">sbanner [@user]</div>
+                    <p>View a user's server banner</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Last.fm Section -->
+        <section id="lastfm" class="tab-content">
+            <h2><i class="fab fa-lastfm"></i> Last.fm Commands</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>login</h3>
+                    <div class="syntax">login [lastfm_username]</div>
+                    <p>Link your Last.fm account</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>lastfm</h3>
+                    <div class="syntax">lastfm</div>
+                    <p>View your Last.fm profile</p>
+                    <div class="aliases-title">Aliases:</div>
+                    <div class="aliases">
+                        <span class="alias">lf</span>
+                        <span class="alias">profile</span>
+                        <span class="alias">me</span>
+                        <span class="alias">p</span>
+                    </div>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>np</h3>
+                    <div class="syntax">np</div>
+                    <p>Show your currently playing track</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>servernowplaying</h3>
+                    <div class="syntax">servernowplaying</div>
+                    <p>Show what users in the server are currently listening to</p>
+                    <div class="aliases-title">Aliases:</div>
+                    <div class="aliases">
+                        <span class="alias">snp</span>
+                    </div>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>logout</h3>
+                    <div class="syntax">logout</div>
+                    <p>Unlink your Last.fm account</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Levels Section -->
+        <section id="levels" class="tab-content">
+            <h2><i class="fas fa-chart-line"></i> Levels Commands</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>level</h3>
+                    <div class="syntax">level [@user]</div>
+                    <p>View your level or someone else's level</p>
+                    <div class="aliases-title">Aliases:</div>
+                    <div class="aliases">
+                        <span class="alias">xp</span>
+                        <span class="alias">lvl</span>
+                        <span class="alias">rank</span>
+                    </div>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>leveltop</h3>
+                    <div class="syntax">leveltop [page]</div>
+                    <p>View the server's level leaderboard</p>
+                    <div class="aliases-title">Aliases:</div>
+                    <div class="aliases">
+                        <span class="alias">lvltop</span>
+                    </div>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>voicelevels</h3>
+                    <div class="syntax">voicelevels [page]</div>
+                    <p>View the server's voice time leaderboard</p>
+                    <div class="aliases-title">Aliases:</div>
+                    <div class="aliases">
+                        <span class="alias">voicetop</span>
+                        <span class="alias">vtop</span>
+                    </div>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>setlevel</h3>
+                    <div class="syntax">setlevel @user [messages]</div>
+                    <p>Set a user's message count for levels</p>
+                    <div class="permissions">Permissions: Administrator</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Birthday Section -->
+        <section id="birthday" class="tab-content">
+            <h2><i class="fas fa-birthday-cake"></i> Birthday Commands</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <h3>bday</h3>
+                    <div class="syntax">bday [@user]</div>
+                    <p>Check your birthday or someone else's birthday</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>bday set</h3>
+                    <div class="syntax">bday set [DD-MM-YYYY]</div>
+                    <p>Set your birthday</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+
+                <div class="command-card">
+                    <h3>bday list</h3>
+                    <div class="syntax">bday list</div>
+                    <p>View upcoming birthdays in the server</p>
+                    <div class="permissions">Permissions: None</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Leurs Bot - All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
